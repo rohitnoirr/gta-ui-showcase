@@ -12,25 +12,26 @@
     }
     body {
       background-color: #111;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start; /* Don't center vertically — show from top */
       padding: 2rem;
-      min-height: 100vh;
-      overflow-y: auto;
+    }
+    .container {
+      max-width: 1000px; /* optional width limit */
+      margin: 0 auto;
     }
     img {
-      width: auto;
-      max-width: 100%;
-      height: auto;
       display: block;
+      width: 100%;
+      height: auto;
       border: 2px solid #333;
       border-radius: 10px;
       box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+      loading: lazy;
     }
   </style>
 </head>
 <body>
-  <img src="gta-design.jpg" alt="GTA UI Design" />
+  <div class="container">
+    <img src="gta-design.jpg" alt="GTA UI Design" loading="lazy" />
+  </div>
 </body>
 </html>
